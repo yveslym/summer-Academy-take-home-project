@@ -12,6 +12,13 @@
 		2028607120AA5DC10088C05E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2028606F20AA5DC10088C05E /* Main.storyboard */; };
 		2028607320AA5DC10088C05E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2028607220AA5DC10088C05E /* Assets.xcassets */; };
 		2028607620AA5DC10088C05E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2028607420AA5DC10088C05E /* LaunchScreen.storyboard */; };
+		2028607F20AA5DEE0088C05E /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2028607E20AA5DEE0088C05E /* Networking.swift */; };
+		2028608120AA5E800088C05E /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2028608020AA5E800088C05E /* Movie.swift */; };
+		20F4B7A020AB686100167A4B /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F4B79F20AB686100167A4B /* CustomView.swift */; };
+		20F4B7A220AB6DA600167A4B /* Extention+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F4B7A120AB6DA600167A4B /* Extention+UIColor.swift */; };
+		20FFD67620AA9DD800C4BD15 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FFD67520AA9DD800C4BD15 /* MovieTableViewCell.swift */; };
+		20FFD67B20AAA64F00C4BD15 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FFD67A20AAA64F00C4BD15 /* DetailViewController.swift */; };
+		20FFD67D20AAB3C500C4BD15 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FFD67C20AAB3C500C4BD15 /* VideoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +29,13 @@
 		2028607220AA5DC10088C05E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2028607520AA5DC10088C05E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2028607720AA5DC10088C05E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2028607E20AA5DEE0088C05E /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		2028608020AA5E800088C05E /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		20F4B79F20AB686100167A4B /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		20F4B7A120AB6DA600167A4B /* Extention+UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extention+UIColor.swift"; sourceTree = "<group>"; };
+		20FFD67520AA9DD800C4BD15 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
+		20FFD67A20AAA64F00C4BD15 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		20FFD67C20AAB3C500C4BD15 /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +68,45 @@
 		2028606A20AA5DC10088C05E /* appleMovie */ = {
 			isa = PBXGroup;
 			children = (
+				20F4B79E20AB682D00167A4B /* Extension */,
+				20FFD67720AAA62200C4BD15 /* Controllers */,
+				20FFD67420AA9DB100C4BD15 /* Views */,
 				2028606B20AA5DC10088C05E /* AppDelegate.swift */,
 				2028606D20AA5DC10088C05E /* ViewController.swift */,
 				2028606F20AA5DC10088C05E /* Main.storyboard */,
 				2028607220AA5DC10088C05E /* Assets.xcassets */,
 				2028607420AA5DC10088C05E /* LaunchScreen.storyboard */,
 				2028607720AA5DC10088C05E /* Info.plist */,
+				2028607E20AA5DEE0088C05E /* Networking.swift */,
+				2028608020AA5E800088C05E /* Movie.swift */,
 			);
 			path = appleMovie;
+			sourceTree = "<group>";
+		};
+		20F4B79E20AB682D00167A4B /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				20F4B79F20AB686100167A4B /* CustomView.swift */,
+				20F4B7A120AB6DA600167A4B /* Extention+UIColor.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		20FFD67420AA9DB100C4BD15 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				20FFD67520AA9DD800C4BD15 /* MovieTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		20FFD67720AAA62200C4BD15 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				20FFD67A20AAA64F00C4BD15 /* DetailViewController.swift */,
+				20FFD67C20AAB3C500C4BD15 /* VideoViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,7 +181,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20F4B7A220AB6DA600167A4B /* Extention+UIColor.swift in Sources */,
+				20FFD67620AA9DD800C4BD15 /* MovieTableViewCell.swift in Sources */,
+				20F4B7A020AB686100167A4B /* CustomView.swift in Sources */,
+				20FFD67D20AAB3C500C4BD15 /* VideoViewController.swift in Sources */,
+				2028607F20AA5DEE0088C05E /* Networking.swift in Sources */,
 				2028606E20AA5DC10088C05E /* ViewController.swift in Sources */,
+				20FFD67B20AAA64F00C4BD15 /* DetailViewController.swift in Sources */,
+				2028608120AA5E800088C05E /* Movie.swift in Sources */,
 				2028606C20AA5DC10088C05E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,11 +329,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K7R433H2CL;
 				INFOPLIST_FILE = appleMovie/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = yveslym.appleMovie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -292,11 +345,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K7R433H2CL;
 				INFOPLIST_FILE = appleMovie/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = yveslym.appleMovie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
