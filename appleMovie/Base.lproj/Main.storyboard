@@ -133,31 +133,31 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="HXt-Gl-AiF">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="40" width="375" height="627"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mbv-Cn-hcL">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="267"/>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Xjj-9V-gIL">
-                                        <rect key="frame" x="0.0" y="267" width="375" height="380"/>
+                                        <rect key="frame" x="0.0" y="267" width="375" height="360"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="1xK-TS-iON">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="38"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="36"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="genre" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r3g-p2-Uza">
-                                                        <rect key="frame" x="0.0" y="0.0" width="125" height="38"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="125" height="36"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="released Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="srC-Nd-BK2">
-                                                        <rect key="frame" x="125" y="0.0" width="125" height="38"/>
+                                                        <rect key="frame" x="125" y="0.0" width="125" height="36"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DGD-8P-OGm">
-                                                        <rect key="frame" x="250" y="0.0" width="125" height="38"/>
+                                                        <rect key="frame" x="250" y="0.0" width="125" height="36"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                         <color key="textColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -165,39 +165,67 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m9a-FJ-zev">
-                                                <rect key="frame" x="0.0" y="38" width="375" height="228"/>
+                                                <rect key="frame" x="0.0" y="36" width="375" height="252"/>
                                                 <subviews>
                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="jYN-3P-Hg0">
-                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="228"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="252"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                     </textView>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="uwj-NW-qeY">
-                                                <rect key="frame" x="0.0" y="266" width="375" height="114"/>
+                                                <rect key="frame" x="0.0" y="288" width="375" height="72"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6z7-6a-1Bf">
-                                                        <rect key="frame" x="0.0" y="0.0" width="187.5" height="114"/>
-                                                        <state key="normal" title="Buy Now"/>
-                                                        <connections>
-                                                            <action selector="buynowButtonTapped:" destination="7j8-n2-qod" eventType="touchUpInside" id="yVp-0t-cbn"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hfn-CN-3wB">
-                                                        <rect key="frame" x="187.5" y="0.0" width="187.5" height="114"/>
-                                                        <state key="normal" title="Watch Trailer"/>
-                                                        <connections>
-                                                            <action selector="watchTrailerTapped:" destination="7j8-n2-qod" eventType="touchUpInside" id="tJc-lb-t0D"/>
-                                                        </connections>
-                                                    </button>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Z0-Gh-3ua">
+                                                        <rect key="frame" x="0.0" y="0.0" width="187.5" height="72"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6z7-6a-1Bf">
+                                                                <rect key="frame" x="9" y="18.5" width="169" height="36"/>
+                                                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <state key="normal" title="Buy Now">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="buynowButtonTapped:" destination="7j8-n2-qod" eventType="touchUpInside" id="yVp-0t-cbn"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="6z7-6a-1Bf" firstAttribute="centerX" secondItem="6Z0-Gh-3ua" secondAttribute="centerX" id="c1Z-L9-dyH"/>
+                                                            <constraint firstItem="6z7-6a-1Bf" firstAttribute="width" secondItem="6Z0-Gh-3ua" secondAttribute="width" multiplier="0.9" id="ekY-q2-IWc"/>
+                                                            <constraint firstItem="6z7-6a-1Bf" firstAttribute="centerY" secondItem="6Z0-Gh-3ua" secondAttribute="centerY" id="hX7-fI-8Rn"/>
+                                                            <constraint firstItem="6z7-6a-1Bf" firstAttribute="height" secondItem="6Z0-Gh-3ua" secondAttribute="height" multiplier="0.5" id="zIA-fF-Smi"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w2J-Yd-JUB">
+                                                        <rect key="frame" x="187.5" y="0.0" width="187.5" height="72"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hfn-CN-3wB">
+                                                                <rect key="frame" x="9.5" y="18.5" width="168.5" height="36"/>
+                                                                <color key="backgroundColor" red="0.975017249584198" green="0.29736766219139099" blue="0.015782758593559265" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <state key="normal" title="Watch Trailer">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="watchTrailerTapped:" destination="7j8-n2-qod" eventType="touchUpInside" id="tJc-lb-t0D"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="hfn-CN-3wB" firstAttribute="centerX" secondItem="w2J-Yd-JUB" secondAttribute="centerX" id="SDB-26-2Vb"/>
+                                                            <constraint firstItem="hfn-CN-3wB" firstAttribute="width" secondItem="w2J-Yd-JUB" secondAttribute="width" multiplier="0.9" id="fgT-fd-42l"/>
+                                                            <constraint firstItem="hfn-CN-3wB" firstAttribute="centerY" secondItem="w2J-Yd-JUB" secondAttribute="centerY" id="yYu-Bu-DwI"/>
+                                                            <constraint firstItem="hfn-CN-3wB" firstAttribute="height" secondItem="w2J-Yd-JUB" secondAttribute="height" multiplier="0.5" id="zfZ-Ad-SFa"/>
+                                                        </constraints>
+                                                    </view>
                                                 </subviews>
                                             </stackView>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="uwj-NW-qeY" firstAttribute="height" secondItem="Xjj-9V-gIL" secondAttribute="height" multiplier="0.3" id="M43-BF-S8t"/>
+                                            <constraint firstItem="uwj-NW-qeY" firstAttribute="height" secondItem="Xjj-9V-gIL" secondAttribute="height" multiplier="0.2" id="M43-BF-S8t"/>
                                             <constraint firstItem="1xK-TS-iON" firstAttribute="height" secondItem="Xjj-9V-gIL" secondAttribute="height" multiplier="0.1" id="h7o-mQ-vUv"/>
                                         </constraints>
                                     </stackView>
@@ -210,11 +238,12 @@
                             <constraint firstItem="j8B-0E-wDE" firstAttribute="trailing" secondItem="HXt-Gl-AiF" secondAttribute="trailing" id="X2V-Y5-xf7"/>
                             <constraint firstItem="HXt-Gl-AiF" firstAttribute="leading" secondItem="j8B-0E-wDE" secondAttribute="leading" id="aXQ-7M-oWS"/>
                             <constraint firstItem="j8B-0E-wDE" firstAttribute="bottom" secondItem="HXt-Gl-AiF" secondAttribute="bottom" id="eDQ-Jg-xbP"/>
-                            <constraint firstItem="HXt-Gl-AiF" firstAttribute="top" secondItem="OVE-hH-XRT" secondAttribute="top" constant="20" id="r60-qf-HrM"/>
+                            <constraint firstItem="HXt-Gl-AiF" firstAttribute="top" secondItem="OVE-hH-XRT" secondAttribute="top" constant="40" id="r60-qf-HrM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="j8B-0E-wDE"/>
                     </view>
                     <connections>
+                        <outlet property="buyNowButton" destination="6z7-6a-1Bf" id="HAR-s4-NDV"/>
                         <outlet property="categoryLabel" destination="r3g-p2-Uza" id="qID-cE-4ep"/>
                         <outlet property="closeButton" destination="cAS-bk-hSt" id="L31-Fj-0x3"/>
                         <outlet property="genreLabel" destination="r3g-p2-Uza" id="LsH-Kw-Nmx"/>
@@ -223,8 +252,7 @@
                         <outlet property="releasedDateLabel" destination="srC-Nd-BK2" id="Bap-Sd-slx"/>
                         <outlet property="summaryTextView" destination="jYN-3P-Hg0" id="dkW-dK-aRr"/>
                         <outlet property="videoView" destination="jkA-BY-sw7" id="elE-Xd-R5m"/>
-                        <segue destination="5Hd-vy-4Uq" kind="show" identifier="movie" id="LOn-tB-kaB"/>
-                        <segue destination="5Hd-vy-4Uq" kind="show" identifier="buy" id="Bg9-ON-JKG"/>
+                        <outlet property="watchButton" destination="hfn-CN-3wB" id="oEX-a7-xYy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dse-YY-kOx" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -245,21 +273,6 @@
             </objects>
             <point key="canvasLocation" x="1340" y="118.29085457271366"/>
         </scene>
-        <!--Video View Controller-->
-        <scene sceneID="UU5-q6-SRL">
-            <objects>
-                <viewController id="5Hd-vy-4Uq" customClass="VideoViewController" customModule="appleMovie" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="S4G-R5-nBA">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <viewLayoutGuide key="safeArea" id="9my-Vi-LAs"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ayR-O6-LhV" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2189" y="128"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="kRi-Xc-qso">
             <objects>
@@ -279,7 +292,4 @@
             <point key="canvasLocation" x="-276" y="116"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="Bg9-ON-JKG"/>
-    </inferredMetricsTieBreakers>
 </document>

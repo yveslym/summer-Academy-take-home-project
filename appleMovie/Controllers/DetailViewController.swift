@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import ChameleonFramework
 class DetailViewController: UIViewController {
 
     // - MARK: IBOUTLET
@@ -19,6 +19,8 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var summaryTextView: UITextView!
     @IBOutlet weak var videoView: UIView!
     @IBOutlet weak var closeButton: UIButton!
+    @IBOutlet weak var watchButton: UIButton!
+    @IBOutlet weak var buyNowButton: UIButton!
     
     // - MARK PROPERTIES
     var movie: Movie!
@@ -26,8 +28,19 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+let color =  ColorsFromImage(poster, withFlatScheme: true).first
+        color?.withAlphaComponent(0.5)
 
+        watchButton.backgroundColor = color!
+        buyNowButton.backgroundColor = color!
         
+        watchButton.layer.cornerRadius = 10
+        buyNowButton.layer.cornerRadius = 10
+        
+        buyNowButton.layer.masksToBounds = true
+        watchButton.layer.masksToBounds = true
+       
+        self.showNavigation()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -45,35 +58,14 @@ class DetailViewController: UIViewController {
     }
     
     // - MARK: IBACTION:
+    
+    // redirect to app store
     @IBAction func buynowButtonTapped(_ sender: Any) {
-        
-        self.performSegue(withIdentifier: "buy", sender: movie.buy)
+        UIApplication.shared.open(URL(string : movie.buy)!, options: [:])
     }
     
+    // redirect to safari to see the trailer
     @IBAction func watchTrailerTapped(_ sender: Any) {
-        let url = URL(string: movie.preview)
-       self.performSegue(withIdentifier: "movie", sender: url)
+        UIApplication.shared.open(URL(string : movie.preview)!, options: [:])
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destination = segue.destination as! VideoViewController
-        if segue.identifier == "movie"{
-        destination.url = sender as! URL
-        }
-        else if segue.identifier == "buy" {
-            destination.url = URL(string:movie.buy)
-        }
-    }
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
