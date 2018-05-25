@@ -15,6 +15,7 @@
 		2028607F20AA5DEE0088C05E /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2028607E20AA5DEE0088C05E /* Networking.swift */; };
 		2028608120AA5E800088C05E /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2028608020AA5E800088C05E /* Movie.swift */; };
 		204E360120B78B0B00FF2144 /* ViewController+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204E360020B78B0B00FF2144 /* ViewController+Extention.swift */; };
+		204E360320B8313F00FF2144 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204E360220B8313F00FF2144 /* Date+Extension.swift */; };
 		20F4B7A020AB686100167A4B /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F4B79F20AB686100167A4B /* CustomView.swift */; };
 		20F4B7A220AB6DA600167A4B /* Extention+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F4B7A120AB6DA600167A4B /* Extention+UIColor.swift */; };
 		20FFD67620AA9DD800C4BD15 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FFD67520AA9DD800C4BD15 /* MovieTableViewCell.swift */; };
@@ -33,6 +34,7 @@
 		2028607E20AA5DEE0088C05E /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		2028608020AA5E800088C05E /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		204E360020B78B0B00FF2144 /* ViewController+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Extention.swift"; sourceTree = "<group>"; };
+		204E360220B8313F00FF2144 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		20F4B79F20AB686100167A4B /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		20F4B7A120AB6DA600167A4B /* Extention+UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extention+UIColor.swift"; sourceTree = "<group>"; };
 		20FFD67520AA9DD800C4BD15 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				20F4B79F20AB686100167A4B /* CustomView.swift */,
 				20F4B7A120AB6DA600167A4B /* Extention+UIColor.swift */,
 				204E360020B78B0B00FF2144 /* ViewController+Extention.swift */,
+				204E360220B8313F00FF2144 /* Date+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 				20F4B7A020AB686100167A4B /* CustomView.swift in Sources */,
 				2028607F20AA5DEE0088C05E /* Networking.swift in Sources */,
 				2028606E20AA5DC10088C05E /* ViewController.swift in Sources */,
+				204E360320B8313F00FF2144 /* Date+Extension.swift in Sources */,
 				20FFD67B20AAA64F00C4BD15 /* DetailViewController.swift in Sources */,
 				204E360120B78B0B00FF2144 /* ViewController+Extention.swift in Sources */,
 				2028608120AA5E800088C05E /* Movie.swift in Sources */,

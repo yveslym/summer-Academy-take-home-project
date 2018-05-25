@@ -19,7 +19,7 @@ class MovieTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         self.poster.frame.size.width /= 2
-        self.poster.layer.borderColor = UIColor.random().cgColor
+        //self.poster.layer.borderColor = UIColor.random().cgColor
         // Initialization code
     }
 

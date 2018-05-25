@@ -27,7 +27,9 @@ struct Movie: Decodable{
     let preview: String
     let releaseDate: String
     var category: String
-    
+    var poster: UIImage?
+    var releaseDateTimeStemp: String
+    var _price: Double = 0.0
     enum FeedKey: String, CodingKey{
         case feed = "feed", entry
     }
@@ -59,10 +61,14 @@ struct Movie: Decodable{
             case label
         }
         enum PriceKey: String, CodingKey{
-           case label
+           case label, attributes
+            
+            enum AttributeKey: String, CodingKey{
+                case amount
+            }
         }
         enum releaseDateKey: String, CodingKey{
-            case attributes
+            case attributes, label
             enum AttributeKey: String, CodingKey{
                 case label
             }
@@ -82,6 +88,8 @@ struct Movie: Decodable{
 
         let summaryContainer = try container.nestedContainer(keyedBy: EntryKey.SummaryKey.self, forKey: .summary)
         let priceCont = try container.nestedContainer(keyedBy: EntryKey.PriceKey.self, forKey: .price)
+        let attributePrice = try priceCont.nestedContainer(keyedBy: EntryKey.PriceKey.AttributeKey.self, forKey: .attributes)
+        
         let linkCont = try container.decode([Link].self, forKey: .link)
         let releaseDateContainer = try container.nestedContainer(keyedBy: EntryKey.releaseDateKey.self, forKey: .releaseDate)
         let attributeContainer = try releaseDateContainer.nestedContainer(keyedBy: EntryKey.releaseDateKey.AttributeKey.self, forKey: .attributes)
@@ -89,6 +97,10 @@ struct Movie: Decodable{
         let CatAttributeContainer = try categoryCont.nestedContainer(keyedBy: EntryKey.CategoryKey.AttributeKey.self, forKey: .attributes)
         category = try CatAttributeContainer.decode(String.self, forKey: .label)
         releaseDate = try attributeContainer.decode(String.self, forKey: .label)
+        let release = try releaseDateContainer.decode(String.self, forKey: .label)
+         releaseDateTimeStemp  = String(release.split(separator: "T").first!)
+       
+        _price = Double(try attributePrice.decode(String.self, forKey: .amount))!
         price = try priceCont.decode(String.self, forKey: .label)
         name = try nameContainer.decode(String.self, forKey: .label)
         summary = try summaryContainer.decode(String.self, forKey: .label)
@@ -96,14 +108,8 @@ struct Movie: Decodable{
         image = (images.last?.label)!
         buy = (linkCont.first?.attributes["href"])!
         preview =  (linkCont.last?.attributes["href"])!
-//        name = ""
-//        image = ""
-//        preview = ""
-//        releaseDate = ""
-//        summary = ""
-//        price = ""
-//        buy = ""
-//        category = ""
+        
+
     }
     
 }

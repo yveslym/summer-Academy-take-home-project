@@ -39,8 +39,10 @@ let color =  ColorsFromImage(poster, withFlatScheme: true).first
         
         buyNowButton.layer.masksToBounds = true
         watchButton.layer.masksToBounds = true
-       
-        self.showNavigation()
+        UIView.animate(withDuration: 5) {
+             self.changeNavigationColor(color!)
+        }
+       NavigationName(movie.name)
     }
     
     override func viewDidAppear(_ animated: Bool) {

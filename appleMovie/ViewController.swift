@@ -14,28 +14,91 @@ class ViewController: UIViewController {
     // - MARK: IBOUTLET
     @IBOutlet weak var movieTableView: UITableView!
     
+    
     // - MARK: PROPERTIES
     var movies = [Movie](){
         didSet{
+            
             DispatchQueue.main.async {
-                 self.movieTableView.reloadData()
+                self.movieTableView.reloadData()
             }
-           
+        }
+    }
+    var moviePoster = [UIImage](){
+        didSet{
+            DispatchQueue.main.async {
+                self.movieTableView.reloadData()
+            }
         }
     }
     var image: UIImage!
+    var popularMovie = [Movie]()
+    
+    // - MARK: IBACTIONS
+    
+    // action that handle the filter
+    @IBAction func segmentSwitched(_ sender: Any, forEvent event: UIEvent) {
+        let switchEvent = sender as! UISegmentedControl
+        
+        switch switchEvent.selectedSegmentIndex{
+        case 0: self.movies = self.popularMovie
+        case 1: self.sortNewMovies()
+        case 2: self.sortByPrice()
+        
+        default: break
+        }
+    }
+    
+    // - MARK: METHODS
+    
+    func sortNewMovies(){
+        self.movies.sort{return $0.releaseDateTimeStemp.toDate()! >  $1.releaseDateTimeStemp.toDate()!}
+        DispatchQueue.main.async {
+            self.movieTableView.reloadData()
+        }
+    }
+    func sortByPrice(){
+        self.movies.sort{return $0._price > $1._price}
+        DispatchQueue.main.async {
+            self.movieTableView.reloadData()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        UITabBar.appearance().barTintColor = UIColor.clear
-        Networking.DownloadCat(page: 1) { (mov)  in
-            self.movies = mov
+        
+        let textAttributes = [NSAttributedStringKey.foregroundColor:UIColor.white]
+        navigationController?.navigationBar.titleTextAttributes = textAttributes
+       
+        Networking.DownloadCat(page: 1) { (listOfMovie)  in
+            
+            DispatchQueue.global().async {
+               
+                var index = 0
+                listOfMovie.forEach{
+                    // download image
+                    let url = URL(string: $0.image)
+                    let data = try? Data(contentsOf: url!)
+                    let image = UIImage(data: data!)
+                    
+                   // add movie in the movie list
+                    self.movies.append($0)
+                    
+                    // add poster in the respective movie object
+                    self.movies[index].poster = image!
+                    
+                    index += 1
+                }
+                self.popularMovie = self.movies
+               
+            }
         }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        UIView.animate(withDuration: 8) {
+            self.changeNavigationColor(HexColor("007AFF")!)
+        }
     }
 }
 
@@ -54,17 +117,12 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
         cell.priceLabel.text = movie.price
         cell.releaseDateLabel.text = movie.releaseDate
         
-        // download the image on the backgroud thread
-        DispatchQueue.global().async {
-           let url = URL(string: movie.image)
-            let data = try? Data(contentsOf: url!)
-            let image = UIImage(data: data!)
-           
-            // update the view on the main thread
-            DispatchQueue.main.async {
-                cell.poster.image = image
-            }
-        }
+        let color =  ColorsFromImage(movie.poster!, withFlatScheme: true).first
+        //color?.withAlphaComponent(0.5)
+
+        cell.poster.layer.borderColor = color?.cgColor
+        
+        cell.poster?.image = movie.poster!
         
         return cell
     }

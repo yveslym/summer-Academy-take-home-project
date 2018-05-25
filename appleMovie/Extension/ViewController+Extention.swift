@@ -31,5 +31,16 @@ extension UIViewController {
         navigationController?.navigationBar.barTintColor = UIColor.white
         navigationController?.navigationBar.tintColor = UIColor.black
     }
+    
+    func changeNavigationColor(_ color: UIColor){
+        navigationController?.navigationBar.barTintColor = color
+        navigationController?.navigationBar.tintColor = UIColor.white
+    }
+    
+    func NavigationName(_ name: String){
+        navigationItem.title = name
+        let textAttributes = [NSAttributedStringKey.foregroundColor:UIColor.white]
+        navigationController?.navigationBar.titleTextAttributes = textAttributes
+    }
 }
 
