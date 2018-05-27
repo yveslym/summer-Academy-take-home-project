@@ -45,7 +45,7 @@ let color =  ColorsFromImage(poster, withFlatScheme: true).first
        NavigationName(movie.name)
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         posterView.image = poster
         releasedDateLabel.text = movie.releaseDate
         priceLabel.text = movie.price

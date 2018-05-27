@@ -16,6 +16,11 @@ the necessary content and I parse the JSON using the "Decodable protocol". Also,
 I only use one library from cocoa pods [chameleon](https://github.com/ViccAlexander/Chameleon) that allows me to retrieve <br>
 the movie poster image color to add to the buy, and watch trailer button.<br>
 
+### Feature
+* buy movie button
+* watch trailer button
+* filter by popularity, price, and date segment control
+
 ### Installation
 
 To run this project all you need to do is to either fork or download the file and then<br>

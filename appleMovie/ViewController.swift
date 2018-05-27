@@ -24,13 +24,7 @@ class ViewController: UIViewController {
             }
         }
     }
-    var moviePoster = [UIImage](){
-        didSet{
-            DispatchQueue.main.async {
-                self.movieTableView.reloadData()
-            }
-        }
-    }
+    
     var image: UIImage!
     var popularMovie = [Movie]()
     
@@ -72,9 +66,10 @@ class ViewController: UIViewController {
        
         Networking.DownloadCat(page: 1) { (listOfMovie)  in
             
+              self.movies = listOfMovie
             DispatchQueue.global().async {
                
-                var index = 0
+             
                 listOfMovie.forEach{
                     // download image
                     let url = URL(string: $0.image)
@@ -82,20 +77,19 @@ class ViewController: UIViewController {
                     let image = UIImage(data: data!)
                     
                    // add movie in the movie list
-                    self.movies.append($0)
+                    var movie = $0
+                    movie.poster = image!
+                    self.popularMovie.append(movie)
                     
-                    // add poster in the respective movie object
-                    self.movies[index].poster = image!
-                    
-                    index += 1
+                   
                 }
-                self.popularMovie = self.movies
+                self.movies = self.popularMovie
                
             }
         }
     }
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         UIView.animate(withDuration: 8) {
             self.changeNavigationColor(HexColor("007AFF")!)
         }
@@ -117,12 +111,14 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
         cell.priceLabel.text = movie.price
         cell.releaseDateLabel.text = movie.releaseDate
         
-        let color =  ColorsFromImage(movie.poster!, withFlatScheme: true).first
+      
         //color?.withAlphaComponent(0.5)
 
+        if movie.poster != nil{
+        let color =  ColorsFromImage(movie.poster!, withFlatScheme: true).first
         cell.poster.layer.borderColor = color?.cgColor
-        
         cell.poster?.image = movie.poster!
+        }
         
         return cell
     }
